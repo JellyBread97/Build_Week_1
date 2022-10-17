@@ -1,0 +1,15 @@
+#question {
+  color: blue;
+}
+
+.btn {
+  color: pink;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
