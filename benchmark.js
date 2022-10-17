@@ -68,6 +68,7 @@ const questionElement = document.getElementById("question")
 const questionNumberElement = document.getElementById("questionNumber")
 const answerButton = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-button")
+const finishButton = document.getElementById("finish-button")
 
 let randomQuestion, currentQuestionIndex
 
@@ -115,7 +116,12 @@ function selectAnswer(e) {
   Array.from(answerButton.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct)
   })
-  nextButton.classList.remove("hidden")
+  if (randomQuestion.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove("hidden")
+  } else {
+    finishButton.classList.remove("hidden")
+    nextButton.classList.add("hidden")
+  }
 }
 
 function setStatusClass(element, correct) {
@@ -133,10 +139,24 @@ function clearStatusClass(element) {
 function changeQuestionNumber() {
   let numberOfQuestions = questions.length
   let currentQuestionNumber = currentQuestionIndex + 1
-  questionNumberElement.innerHTML = ` question ${currentQuestionNumber} of ${numberOfQuestions}`
+  questionNumberElement.innerHTML = `Question ${currentQuestionNumber} of ${numberOfQuestions}`
+
   //   if (numberOfQuestions < currentQuestionNumber) {
   //     questionNumberElement.classList.add("hidden")
   //   }
 }
 
+nextButton.addEventListener("click", hideNextButton)
+function hideNextButton() {
+  nextButton.classList.add("hidden")
+}
+
 startBenchmark()
+
+finishButton.addEventListener("click", finishBenchmark)
+
+function finishBenchmark() {
+  questionContainer.classList.add("hidden")
+  questionNumberElement.classList.add("hidden")
+  finishButton.classList.add("hidden")
+}
