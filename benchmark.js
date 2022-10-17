@@ -89,10 +89,11 @@ function setNextQuestion() {
   showQuestion(randomQuestion[currentQuestionIndex])
   changeQuestionNumber()
 }
-
+// shows the next question
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach((answer) => {
+    // for each option in the answer array
     const button = document.createElement("button")
     button.innerText = answer.text
     button.classList.add("btn")
@@ -100,10 +101,10 @@ function showQuestion(question) {
       button.dataset.correct = answer.correct
     }
     button.addEventListener("click", selectAnswer)
-    answerButton.appendChild(button)
+    answerButton.appendChild(button) // adds button to parent
   })
 }
-
+// removes previous answer buttons
 function resetState() {
   while (answerButton.firstChild) {
     answerButton.removeChild(answerButton.firstChild)
@@ -123,7 +124,7 @@ function selectAnswer(e) {
     nextButton.classList.add("hidden")
   }
 }
-
+// changes colour based on whether answer is correct or wrong
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -154,7 +155,7 @@ function hideNextButton() {
 startBenchmark()
 
 finishButton.addEventListener("click", finishBenchmark)
-
+// makes finish button appear
 function finishBenchmark() {
   questionContainer.classList.add("hidden")
   questionNumberElement.classList.add("hidden")
