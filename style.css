@@ -47,5 +47,9 @@ ol{
     padding: 50px o;
 }
 ol li{
-    margin: o 15px;
+    margin: 0 15px;
+}
+li a{
+    font-size: 25px;
+    color:turquoise
 }
