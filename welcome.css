@@ -2,11 +2,11 @@ body,
 html {
   height: 100%;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10%;
+  margin-right: 10%;
   background-color: black;
   height: 80vh;
-  width: 60vw;
+  width: auto;
   user-select: none;
 }
 
@@ -20,15 +20,13 @@ html {
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  margin-top: 8%;
 }
 
 .logo {
   position: absolute;
   top: 3%;
   left: 14%;
-  height: 5%;
-  width: 2%;
 }
 
 .heading1 {
@@ -89,6 +87,7 @@ span {
   bottom: 15%;
   font-size: 1.8vh;
   font-family: Arial;
+  margin-right: 20vw;
 }
 
 input.check-box {
@@ -99,7 +98,6 @@ input.check-box {
   width: 2vh;
   height: 2vh;
   border: solid white;
-  appearance: none;
   cursor: pointer;
 }
 
