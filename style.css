@@ -1,0 +1,112 @@
+body,
+html {
+  height: 100%;
+  position: relative;
+  margin: 0;
+}
+
+.bg {
+  position: relative;
+  background-image: url("./assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  background-size: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 2vh;
+  left: 16vh;
+  height: 1vh;
+  width: 2vh;
+}
+
+.heading1 {
+  position: absolute;
+  top: 10vh;
+  left: 16vh;
+  color: white;
+  font-family: Arial;
+  font-style: normal;
+  font-size: 3vh;
+}
+
+.heading2 {
+  position: absolute;
+  top: 12vh;
+  left: 16vh;
+  color: white;
+  font-family: Arial;
+  font-style: normal;
+  font-size: 5vh;
+}
+
+.instructions h3 {
+  position: absolute;
+  top: 32vh;
+  left: 16vh;
+  font-family: Arial;
+  font-size: 3vh;
+  color: darkorchid;
+}
+
+.instructions p {
+  position: absolute;
+  top: 38vh;
+  left: 16vh;
+  font-size: 1.8vh;
+  font-family: Arial;
+  color: white;
+}
+
+.instructions ul {
+  position: absolute;
+  top: 46vh;
+  left: 16vh;
+  font-size: 1.8vh;
+  font-family: Arial;
+  color: white;
+}
+
+span {
+  font-weight: bold;
+}
+
+.checkbox label {
+  position: absolute;
+  color: white;
+  left: 20vh;
+  bottom: 10vh;
+  font-size: 1.8vh;
+  font-family: Arial;
+}
+
+input.check-box {
+  position: absolute;
+  background-color: darkblue;
+  left: 16vh;
+  bottom: 10vh;
+  width: 2vh;
+  height: 2vh;
+  border: 1vh solid #ddd;
+  appearance: none;
+  cursor: pointer;
+}
+
+.proceed {
+  position: absolute;
+  font-family: Arial;
+  font-weight: bold;
+  background-color: aqua;
+  text-align: center;
+  font-size: 2.5vh;
+  padding: 2vh 4vh;
+  bottom: 7vh;
+  right: 14vh;
+  border-color: aqua;
+  color: darkblue;
+  background: aqua;
+  box-shadow: 0 0 4vh aqua;
+  cursor: pointer;
+}
