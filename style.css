@@ -3,7 +3,12 @@
 }
 
 .btn {
-  color: pink;
+  color: purple;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
 }
 
 .correct {
@@ -12,4 +17,8 @@
 
 .wrong {
   color: red;
+}
+
+.hidden {
+  display: none;
 }
