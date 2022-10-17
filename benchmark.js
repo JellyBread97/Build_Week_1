@@ -74,6 +74,7 @@ let randomQuestion, currentQuestionIndex
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++
   setNextQuestion()
+  changeQuestionNumber()
 })
 
 function startBenchmark() {
@@ -130,8 +131,12 @@ function clearStatusClass(element) {
   element.classList.remove("correct")
 }
 function changeQuestionNumber() {
-  const currentQuestion = 1
-  const totalQuestions = questions.question.length
+  let numberOfQuestions = questions.length
+  let currentQuestionNumber = currentQuestionIndex + 1
+  questionNumberElement.innerHTML = ` question ${currentQuestionNumber} of ${numberOfQuestions}`
+  //   if (numberOfQuestions < currentQuestionNumber) {
+  //     questionNumberElement.classList.add("hidden")
+  //   }
 }
 
 startBenchmark()
