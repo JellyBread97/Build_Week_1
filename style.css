@@ -1,3 +1,7 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
 #question {
   color: blue;
 }
@@ -21,4 +25,56 @@
 
 .hidden {
   display: none;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#countdownContainer {
+  background-color: beige;
+  height: 200px;
+  width: 200px;
+}
+
+.circle-container {
+  background-color: lightblue;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.semicircle {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: right center;
+}
+
+.semicircle:nth-child(1) {
+  background-color: turquoise;
+  z-index: 2;
+}
+.semicircle:nth-child(2) {
+  background-color: purple;
+  z-index: 3;
+}
+.semicircle:nth-child(3) {
+  background-color: white;
+  z-index: 4;
+  display: none;
+}
+
+.outermost-circle {
+  width: 130px;
+  height: 130px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 5;
 }
