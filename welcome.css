@@ -4,7 +4,7 @@ html {
   position: relative;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: black;
+  background-color: #0e0e0e;
   height: 80vh;
   width: auto;
   user-select: none;
@@ -33,7 +33,7 @@ html {
   position: absolute;
   top: 10%;
   left: 14%;
-  color: white;
+  color: #e7e7eb;
   font-family: Arial;
   font-style: normal;
   font-size: 3vh;
@@ -43,7 +43,7 @@ html {
   position: absolute;
   top: 12%;
   left: 14%;
-  color: white;
+  color: #e7e7eb;
   font-family: Arial;
   font-style: normal;
   font-size: 5vh;
@@ -55,7 +55,7 @@ html {
   left: 14%;
   font-family: Arial;
   font-size: 3vh, 3vw;
-  color: darkorchid;
+  color: #c2128d;
 }
 
 .instructions p {
@@ -64,7 +64,7 @@ html {
   left: 14%;
   font-size: 1.8vh;
   font-family: Arial;
-  color: white;
+  color: #e7e7eb;
 }
 
 .instructions ul {
@@ -73,7 +73,7 @@ html {
   left: 14%;
   font-size: 1.8vh;
   font-family: Arial;
-  color: white;
+  color: #e7e7eb;
 }
 
 span {
@@ -82,7 +82,7 @@ span {
 
 .checkbox label {
   position: absolute;
-  color: white;
+  color: #e7e7eb;
   left: 20%;
   bottom: 15%;
   font-size: 1.8vh;
@@ -97,7 +97,7 @@ input.check-box {
   bottom: 15%;
   width: 2vh;
   height: 2vh;
-  border: solid white;
+  border: solid #e7e7eb;
   cursor: pointer;
 }
 
@@ -105,15 +105,15 @@ input.check-box {
   position: absolute;
   font-family: Arial;
   font-weight: bold;
-  background-color: aqua;
+  background-color: #41ffff;
   text-align: center;
   font-size: 2.5vh;
   padding: 2% 4%;
   bottom: 12%;
   right: 7%;
-  border-color: aqua;
-  color: darkblue;
-  background: aqua;
-  box-shadow: 0 0 4vh aqua;
+  border-color: #41ffff;
+  color: #0b113b;
+  background: #41ffff;
+  box-shadow: 0 0 4vh #41ffff;
   cursor: pointer;
 }

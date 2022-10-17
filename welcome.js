@@ -5,7 +5,7 @@ function proceed() {
     if (checkbox.checked === false) {
       alert("You have to promise first!");
     } else if (checkbox.checked === true) {
-      location.href = ""; // question page .html here
+      location.href = ""; // benchmark page .html here
     }
   });
 }
