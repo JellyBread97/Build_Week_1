@@ -115,12 +115,13 @@ function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
   Array.from(answerButton.children).forEach((button) => {
+    // checks if the answer is correct or wrond
     setStatusClass(button, button.dataset.correct)
   })
   if (randomQuestion.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hidden")
   } else {
-    finishButton.classList.remove("hidden")
+    finishButton.classList.remove("hidden") // shows the finish button when we run out of questions
     nextButton.classList.add("hidden")
   }
 }
@@ -141,10 +142,6 @@ function changeQuestionNumber() {
   let numberOfQuestions = questions.length
   let currentQuestionNumber = currentQuestionIndex + 1
   questionNumberElement.innerHTML = `Question ${currentQuestionNumber} of ${numberOfQuestions}`
-
-  //   if (numberOfQuestions < currentQuestionNumber) {
-  //     questionNumberElement.classList.add("hidden")
-  //   }
 }
 
 nextButton.addEventListener("click", hideNextButton)
@@ -153,6 +150,52 @@ function hideNextButton() {
 }
 
 startBenchmark()
+
+// code for timer
+const semicircles = document.querySelectorAll(".semicircle")
+
+//input
+
+const hr = 0
+const min = 0
+const sec = 10
+
+const hours = hr * 3600000
+const minutes = min * 60000
+const seconds = sec * 1000
+const setTime = hours + minutes + seconds
+const startTime = Date.now()
+const futureTime = startTime + setTime
+
+const timerLoop = setInterval(countDownTimer)
+countDownTimer()
+
+function countDownTimer() {
+  const currrentTime = Date.now()
+  const remainingTime = futureTime - currrentTime
+  const angle = (remainingTime / setTime) * 360
+  // progress indicator
+  if (angle > 180) {
+    semicircles[2].style.display = "none"
+    semicircles[0].style.transform = "rotate(180deg)"
+    semicircles[1].style.transform = `rotate(${angle}deg)`
+  } else {
+    {
+      semicircles[2].style.display = "block"
+      semicircles[0].style.transform = `rotate(${angle}deg)`
+      semicircles[1].style.transform = `rotate(${angle}deg)`
+    }
+  }
+  //timer
+
+  //end
+  if (remainingTime < 0) {
+    clearInterval(timerLoop)
+    semicircles[2].style.display = "none"
+    semicircles[0].style.transform = "none"
+    semicircles[1].style.transform = "none"
+  }
+}
 
 finishButton.addEventListener("click", finishBenchmark)
 // makes finish button appear
