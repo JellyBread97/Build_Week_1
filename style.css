@@ -59,6 +59,14 @@ li a{
     cursor: pointer;
     position: absolute;
     z-index: 1;
-    bottom:30%;
+    bottom:20%;
     left:40%;
+}
+#paragraph{
+    position: absolute;
+    top: 230px;
+}
+#textarea{
+    position: absolute;
+    top: 270px; 
 }
