@@ -2,25 +2,19 @@ body,
 html {
   height: 100%;
   position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
   background-color: #0e0e0e;
-  height: 80vh;
-  width: auto;
   user-select: none;
+  margin: 0;
 }
 
 .bg {
-  position: relative;
-  background-image: url("./assets/bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url(/assets/bg.jpg);
   height: 100%;
-  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 8%;
+  padding: 0;
+  margin: 0;
 }
 
 .logo {
@@ -34,8 +28,8 @@ html {
   top: 10%;
   left: 14%;
   color: #e7e7eb;
-  font-family: Arial;
-  font-style: normal;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
   font-size: 3vh;
 }
 
@@ -44,8 +38,8 @@ html {
   top: 12%;
   left: 14%;
   color: #e7e7eb;
-  font-family: Arial;
-  font-style: normal;
+  font-family: "Outfit", sans-serif;
+  font-weight: 900;
   font-size: 5vh;
 }
 
@@ -53,8 +47,8 @@ html {
   position: absolute;
   top: 34%;
   left: 14%;
-  font-family: Arial;
-  font-size: 3vh, 3vw;
+  font-family: "Inter", sans-serif;
+  font-size: 3vh;
   color: #c2128d;
 }
 
@@ -63,7 +57,7 @@ html {
   top: 40%;
   left: 14%;
   font-size: 1.8vh;
-  font-family: Arial;
+  font-family: "Inter", sans-serif;
   color: #e7e7eb;
 }
 
@@ -72,7 +66,7 @@ html {
   top: 48%;
   left: 14%;
   font-size: 1.8vh;
-  font-family: Arial;
+  font-family: "Inter", sans-serif;
   color: #e7e7eb;
 }
 
@@ -83,10 +77,10 @@ span {
 .checkbox label {
   position: absolute;
   color: #e7e7eb;
-  left: 20%;
+  left: 16%;
   bottom: 15%;
   font-size: 1.8vh;
-  font-family: Arial;
+  font-family: "Inter", sans-serif;
   margin-right: 20vw;
 }
 
@@ -103,7 +97,7 @@ input.check-box {
 
 .proceed {
   position: absolute;
-  font-family: Arial;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   background-color: #41ffff;
   text-align: center;
